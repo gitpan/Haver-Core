@@ -1,0 +1,70 @@
+--- #YAML:1.0
+name: haver-core
+version: 0.06
+author:
+  - Dylan William Hardison <dylanwh@tampabay.rr.com>
+abstract: Common modules for Haver::Server and Haver::Client
+license: gpl
+requires:
+  Filter::Simple: 0
+  YAML: 0.35
+  perl: 5.6.1
+recommends:
+  Haver::Client: 0.06
+  Haver::Server: 0.06
+  POE: 0.28
+provides:
+  Haver:
+    file: lib/Haver.pm
+    version: 0.06
+  Haver::Base:
+    file: lib/Haver/Base.pm
+    version: 0.01
+  Haver::Config:
+    file: lib/Haver/Config.pm
+    version: 0.02
+  Haver::Logger:
+    file: lib/Haver/Logger.pm
+    version: 0.01
+  Haver::Misc:
+    file: lib/Haver/Misc.pm
+    version: 0.01
+  Haver::OS:
+    file: lib/Haver/OS.pm
+    version: 0.01
+  Haver::OS::BSD:
+    file: lib/Haver/OS/BSD.pm
+    version: 0.01
+  Haver::OS::Linux:
+    file: lib/Haver/OS/Linux.pm
+    version: 0.01
+  Haver::OS::Unix:
+    file: lib/Haver/OS/Unix.pm
+    version: 0.01
+  Haver::OS::Win32:
+    file: lib/Haver/OS/Win32.pm
+    version: 0.01
+  Haver::OS::Win95:
+    file: lib/Haver/OS/Win95.pm
+    version: 0.01
+  Haver::OS::WinNT:
+    file: lib/Haver/OS/WinNT.pm
+    version: 0.01
+  Haver::Preprocessor:
+    file: lib/Haver/Preprocessor.pm
+  Haver::Protocol:
+    file: lib/Haver/Protocol.pm
+    version: 0.03
+  Haver::Reload:
+    file: lib/Haver/Reload.pm
+    version: 0.01
+  Haver::Savable:
+    file: lib/Haver/Savable.pm
+    version: 0.02
+  Haver::Singleton:
+    file: lib/Haver/Singleton.pm
+    version: 0.03
+  POE::Filter::Haver:
+    file: lib/POE/Filter/Haver.pm
+    version: 0.02
+generated_by: Module::Build version 0.24
