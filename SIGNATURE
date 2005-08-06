@@ -1,0 +1,52 @@
+This file contains message digests of all files listed in MANIFEST,
+signed via the Module::Signature module, version 0.44.
+
+To verify the content in this distribution, first make sure you have
+Module::Signature installed, then type:
+
+    % cpansign -v
+
+It will check each file's integrity, as well as the signature's
+validity.  If "==> Signature verified OK! <==" is not displayed,
+the distribution may already have been compromised, and you should
+not run its Makefile.PL or Build.PL.
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+SHA1 cf44173edd34e4f8035bcb3845e9c2ae7deab410 Build.PL
+SHA1 dff323fd8c551f59ae926d726f0ce3a5d8eae36c COPYING
+SHA1 330f8d4881645bd3c08e4c01aa72826db0672e8a MANIFEST
+SHA1 852b80d99d938e8b745ec9d8ca16d2d41bdef106 MANIFEST.SKIP
+SHA1 2967dacf4240ff1edbcad092a3b8e6127a8e4195 META.yml
+SHA1 a359d4072690a21ce63e4b393bdbc19d72b6be5a Makefile.PL
+SHA1 57734c03605691906d8f23d280b0940668fd4182 README
+SHA1 b39651600896740d740708c686378f3737b19f7b debian/changelog
+SHA1 9c6b057a2b9d96a4067a749ee3b3b0158d390cf1 debian/compat
+SHA1 91a14f5b1ec141bfb51b9b25a0d9cee95ae4bf6f debian/control
+SHA1 5cdd7891c6d7b27494fcb014b2a198a41f64fb99 debian/copyright
+SHA1 7c88885d9999d8b825ac46fe276664d45d28f463 debian/keyid
+SHA1 a3f0bb079059b3edf746ac1b148697251b70857e debian/rules
+SHA1 acee5e3dfef4d34d41cb0092747889db72e40ae8 foobar
+SHA1 8c44b89e78a85518003e50906eccdac300f1dc06 lib/Haver/Base.pm
+SHA1 81ba695b154cb506143310609d58fb9e437567f6 lib/Haver/Config.pm
+SHA1 251df93e86ad7ef5f10a4c0a9cda607494449f75 lib/Haver/Core.pm
+SHA1 3da1c4e5880eeb56f86f3207e7ce30736876c593 lib/Haver/Logger.pm
+SHA1 39cef7d581473206ba84acb9071f6448dd7b8997 lib/Haver/Protocol.pm
+SHA1 bb44b916ea7b9ddcaff2a9c6cbc7884dfc2309d8 lib/Haver/Protocol/Filter.pm
+SHA1 aebcb72a33fd01d8ebd0edbcd6f0f05a4f9a48e7 lib/Haver/Session.pm
+SHA1 1af6beb0e748a5018f189d78dc4ea7ba97f9d1f5 lib/Haver/Util.pm
+SHA1 4d02c4a4a84483d1eb0fe30f6ac2aec844737fa8 lib/Haver/Wheel.pm
+SHA1 f69036a2098d4dbe0d445e05dd863cc7fb637cbf lib/Haver/Wheel/Loader.pm
+SHA1 b59a83532b95ebea58647c1dfe89fa7ce67fa513 t/001_config.t
+SHA1 20794573616f7591da4d04a6216f7d65a22a6bb0 t/002_protocol.t
+SHA1 dc106af9d8119756e023a91402f500a9c2c557cd t/003_wheel.t
+SHA1 1d91e2cef9cd7fed5f349feea52251e3be4bed7e t/004_session.t
+SHA1 9b28a6c8c960487458643b682fc58ad6839e0d02 t/005_util.t
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC9EiIdw4Or/tTEsIRAgDAAKCPppQ4Zu2pjd8DLWd/i9ybQks1AACgsTOG
+pj/sBa4QAb+/Y3rqpjDu9co=
+=E235
+-----END PGP SIGNATURE-----

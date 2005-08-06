@@ -16,7 +16,6 @@
 # You should have received a copy of the GNU General Public License
 # along with this module; if not, write to the Free Software
 # Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
-
 package Haver::Protocol;
 use strict;
 use warnings;
@@ -81,7 +80,7 @@ sub line2event {
 
 sub event2line {
 	my @event;
-	if (@_ > 1) {
+	if (@_ > 1 or not ref $_[0]) {
 		@event = @_;
 	} else {
 		@event = @{$_[0]};
@@ -89,12 +88,9 @@ sub event2line {
 	foreach (@event) {
 		$_ = escape($_);
 	}
-	
 	join("\t", @event) . $CRLF;
 }
 
-
-1;
 
 1;
 __END__
@@ -121,15 +117,13 @@ event2line(), line2event(), $CRLF, $CR, $LF, %Escape, %Unescape.
 
 =head1 SEE ALSO
 
-L<Haver::Protocol::Filter>
+L<POE::Filter::Haver>
 
 L<https://gna.org/projects/haver/>
 
-
-
 =head1 AUTHOR
 
-Dylan William Hardison, E<lt>dylanwh@tampabay.rr.comE<gt>
+Dylan William Hardison, E<lt>dhardison@cpan.orgE<gt>
 
 =head1 COPYRIGHT AND LICENSE
 

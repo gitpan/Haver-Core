@@ -1,7 +1,8 @@
-# Haver - Main module of Haver-Common.
+# vim: set ts=4 sw=4 si ai sta tw=100:
+# Haver::Core - Modules used by both Haver::Client and Haver::Server.
 # 
-# Copyright (C) 2004 Dylan William Hardison
-#
+# Copyright (C) 2005 Dylan Hardison.
+# 
 # This module is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
 # the Free Software Foundation; either version 2 of the License, or
@@ -15,56 +16,53 @@
 # You should have received a copy of the GNU General Public License
 # along with this module; if not, write to the Free Software
 # Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
-package Haver;
-use strict;
-use warnings;
+package Haver::Core;
 
-our $VERSION = 0.06;
+our $VERSION = 0.08;
 
 1;
 __END__
 
 =head1 NAME
 
-Haver - Common modules for Haver::Server and Haver::Client.
+Haver::Core - Modules used by both Haver::Client and Haver::Server.
 
 =head1 SYNOPSIS
 
-There is none. This module contains no code.
+   # This module doesn't really do anything.
+   # It is just a place holder for documentation...
 
 =head1 DESCRIPTION
 
-This collection of modules contains
-modules used by both the Haver server and Haver client.
+The Haver-Core CPAN distribution contains several modules used by both L<Haver::Client>
+and L<Haver::Server>. They are listed in the L</SEE ALSO> section below.
 
-=head2 EXPORT
+=head1 BUGS
 
-None by default.
-
-=head1 SEE ALSO
-
-L<Haver::Protocol>, L<Haver::Protocol::Filter>, L<Haver::Base>, L<Haver::Singleton>,
-L<Haver::Utils::Logger>.
-
-
-L<https://gna.org/projects/haver/>
-
-
+None known. Bug reports are welcome. Please use our bug tracker at
+L<http://gna.org/bugs/?func=additem&group=haver>.
 
 =head1 AUTHOR
 
-Dylan William Hardison, E<lt>dylanwh@tampabay.rr.comE<gt>
+Dylan Hardison E<lt>dylan@haverdev.orgE<gt>.
 
-=head1 COPYRIGHT AND LICENSE
+=head1 SEE ALSO
 
-Copyright (C) 2004 by Dylan William Hardison
+L<Haver::Base>, L<Haver::Session>, L<Haver::Wheel>, L<Haver::Config>,
+L<Haver::Protocol>, L<Haver::Protocol::Filter>, L<Haver::Logger>.
 
-This library is free software; you can redistribute it and/or modify
+L<http://www.haverdev.org/>.
+
+=head1 COPYRIGHT and LICENSE
+
+Copyright (C) 2005 by Dylan Hardison. All Rights Reserved.
+
+This module is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation; either version 2 of the License, or
 (at your option) any later version.
 
-This library is distributed in the hope that it will be useful,
+This module is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.
@@ -73,4 +71,3 @@ You should have received a copy of the GNU General Public License
 along with this module; if not, write to the Free Software
 Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
-=cut

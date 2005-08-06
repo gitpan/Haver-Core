@@ -7,9 +7,8 @@
 
 # change 'tests => 1' to 'tests => last_test_to_print';
 
-use Test::More tests => 6;
+use Test::More tests => 5;
 BEGIN {
-	use_ok('Haver');
 	use_ok('Haver::Protocol', qw(:event :crlf :escape));
 };
 

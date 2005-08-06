@@ -1,4 +1,5 @@
-# POE::Filter::Haver
+# vim: set ft=perl ts=4 sw=4 sta si ai tw=100 expandtab:
+# Haver::Protocol::Filter
 # This is a POE filter for the Haver protocol.
 # It subclasses POE::Filter::Line.
 # 
@@ -18,7 +19,7 @@
 # You should have received a copy of the GNU General Public License
 # along with this module; if not, write to the Free Software
 # Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
-package POE::Filter::Haver;
+package Haver::Protocol::Filter;
 use warnings;
 use strict;
 use POE;
@@ -27,28 +28,30 @@ use Haver::Protocol qw( $CRLF %Escape %Unescape );
 
 our $VERSION = "0.02";
 
-
-
 sub new {
 	my ($this) = @_;
 	
-	return $this->SUPER::new(Literal => $CRLF);
+	return $this->SUPER::new(
+		OutputLiteral => $CRLF,
+		InputRegexp => qr/\r?\n/,
+	);
 }
 
-sub get {
-	my ( $self, $arg) = @_;
-	my $lines = $self->SUPER::get($arg);
-
-	foreach my $line (@{$lines}) {
-		my @f = split("\t", $line);
-		
-		foreach my $item (@f) {
-			$item =~ s/\e([rent])/$Unescape{$1}/g;
-		}
-		$line = \@f;
-	}
-	return $lines;
-}
+# This is not needed any more, so let's not use it.
+#sub get {
+#	my ( $self, $arg) = @_;
+#	my $lines = $self->SUPER::get($arg);
+#
+#	foreach my $line (@{$lines}) {
+#		my @f = split("\t", $line);
+#		
+#		foreach my $item (@f) {
+#			$item =~ s/\e([rent])/$Unescape{$1}/g;
+#		}
+#		$line = \@f;
+#	}
+#	return $lines;
+#}
 
 sub get_one {
 	my ($self) = @_;
@@ -92,12 +95,12 @@ __END__
 
 =head1 NAME
 
-POE::Filter::Haver - POE::Filter for the Haver protocol.
+Haver::Protocol::Filter - POE::Filter for the Haver protocol.
 
 =head1 SYNOPSIS
 
-  use POE::Filter::Haver;
-  my $filter = new POE::Filter::Haver; # takes no arguments.
+  use Haver::Protocol::Filter;
+  my $filter = new Haver::Protocol::Filter; # takes no arguments.
   
   # See POE::Filter. This is just a standard filter.
   # it inherits from POE::Filter::Line.
@@ -116,7 +119,7 @@ L<http://wiki.chani3.com/wiki/ProjectHaver/ProtocolSyntax>.
 
 =head1 AUTHOR
 
-Bryan Donlan, E<lt>:bdonlan@bd-home-comp.no-ip.orgE<gt>
+Bryan Donlan, E<lt>:bdonlan@gmail.comE<gt>
 with small modifications and documentation by
 Dylan William Hardison, E<lt>dylanwh@tampabay.rr.comE<gt>
 
@@ -140,3 +143,17 @@ along with this module; if not, write to the Free Software
 Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
 =cut
+
+
+sub new {
+	my ($this) = @_;
+	my $me = bless {}, ref($this) || $this;
+
+	# ...
+
+	return $me;
+}
+
+
+1;
+

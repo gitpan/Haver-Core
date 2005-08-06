@@ -1,0 +1,7 @@
+---
+bar: baz
+baz:
+  - name: bob
+foo: bar
+stuff:
+  monkeys: 2

@@ -7,3 +7,7 @@ _build
 ^\.#
 \.svn
 \.tar\.gz$
+.*-stamp
+^debian/lib
+^cover_db
+^debian/files
